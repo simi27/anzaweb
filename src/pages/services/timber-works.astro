@@ -1,0 +1,57 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Timber Works — Tomarac Company Ltd',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Timber & Wood Processing"
+    title="Quality Wood Products for Industry"
+  />
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Sawing & Splitting',
+        description:
+          'Professional timber sawing and wood splitting services for construction, manufacturing, and commercial use. Precision cuts and consistent quality.',
+      },
+      {
+        title: 'Sawdust & Woodchips',
+        description:
+          'Supply of sawdust and woodchips for industrial applications, animal bedding, biomass fuel, and landscaping.',
+      },
+      {
+        title: 'Wood Strips & Products',
+        description:
+          'Manufactured wood strips, planks, and processed timber for carpentry, joinery, and building projects.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1581614500187-50a4e6fb5d73?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Timber Works',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">From Forest to Finished Product</h3>
+      Sustainable timber processing for commercial and industrial clients.
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'Enquire About Timber', href: '/contact', icon: 'tabler:arrow-right' },
+    ]}
+  >
+    <Fragment slot="title">Need timber or wood products?</Fragment>
+    <Fragment slot="subtitle">Contact us for pricing and availability.</Fragment>
+  </CallToAction>
+</Layout>
