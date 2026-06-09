@@ -2,78 +2,60 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact Us',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText
+    tagline="Get in Touch"
+    title="Let's Create Something Extraordinary Together"
+  />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Send Us a Message"
+    subtitle="Tell us about your project. We'll get back to you within 24 hours."
     inputs={[
+      { type: 'text', name: 'name', label: 'Full Name', autocomplete: 'name' },
+      { type: 'email', name: 'email', label: 'Email', autocomplete: 'email' },
+      { type: 'tel', name: 'phone', label: 'Phone', autocomplete: 'tel' },
       {
         type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
+        name: 'service',
+        label: 'Service Needed',
+        placeholder: 'e.g., Graphic Design, Car Rental, ICT Supplies, Timber',
       },
     ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
+    textarea={{ name: 'message', label: 'Message', placeholder: 'Describe your project or requirements...' }}
+    button="Send Message"
+    description="Or reach us directly by phone, email, or WhatsApp."
   />
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="We are here to help!"
-    items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
+  <div class="max-w-4xl mx-auto px-4 pb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800">
+        <h3 class="font-semibold text-[#001C3E] dark:text-white mb-2">Email</h3>
+        <a href="mailto:tomarac2024@gmail.com" class="text-orange-500 hover:underline">tomarac2024@gmail.com</a>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800">
+        <h3 class="font-semibold text-[#001C3E] dark:text-white mb-2">Phone</h3>
+        <div class="text-orange-500">
+          <a href="tel:+255****6928" class="hover:underline block">+255 713 636 928</a>
+          <a href="tel:+255****4444" class="hover:underline block">+255 759 014 444</a>
+        </div>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800">
+        <h3 class="font-semibold text-[#001C3E] dark:text-white mb-2">Location</h3>
+        <p class="text-gray-500 text-sm">NHC-Urafiki flats, Ubungo<br/>Morogoro Road, Dar es Salaam</p>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <a href="/assets/tomaracprofile.pdf" download class="inline-flex items-center gap-2 bg-orange-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors text-sm">
+        Download Company Profile
+      </a>
+    </div>
+  </div>
 </Layout>

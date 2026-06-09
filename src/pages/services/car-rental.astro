@@ -1,0 +1,62 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Car Rental — Tomarac Company Ltd',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Mobility & Logistics"
+    title="Reliable Transport for Every Journey"
+  />
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Corporate & Government',
+        description:
+          'Field-ready vehicles for public awareness campaigns, governmental activities, and project teams. Land Cruisers, Prados, and hardtops — secure, government-compliant, and always on time.',
+      },
+      {
+        title: 'Executive Transport',
+        description:
+          'Discreet, comfortable chauffeur-driven service for CEOs, VIPs, and diplomats. Alphard luxury sedans and premium vehicles for high-profile clients.',
+      },
+      {
+        title: 'Tourism & Leisure',
+        description:
+          'Safari-spec vehicles, air-conditioned minibuses, and family-friendly options for international visitors, tour groups, and vacation travel.',
+      },
+      {
+        title: 'Mass Transit & Shuttle',
+        description:
+          'Coaster buses and vans for conference organizers, hotels, airport transfers, and community services. High-capacity, punctual, and reliable.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Car Rental Services',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Safe, Reliable, Ready</h3>
+      Whether you need a single vehicle for an executive transfer or a full fleet for a government campaign — we deliver.
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'Book a Vehicle', href: '/contact', icon: 'tabler:arrow-right' },
+    ]}
+  >
+    <Fragment slot="title">Ready to hit the road?</Fragment>
+    <Fragment slot="subtitle">Get a quote for your next trip, event, or project.</Fragment>
+  </CallToAction>
+</Layout>

@@ -1,0 +1,81 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Printing & Branding — Tomarac Company Ltd',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Visual Communication"
+    title="Your Brand, Our Canvas"
+  />
+
+  <Content
+    image={{
+      src: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Printing Services',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">From Concept to Creation</h3>
+      We think creative so you can communicate adequately. From the first sketch to the final install — we bring your brand to life.
+    </Fragment>
+  </Content>
+
+  <Features2
+    tagline="Our Capabilities"
+    title="Full-Service Creative Production"
+    subtitle="Graphic design, large format printing, vehicle branding, promotional merchandise — everything under one roof."
+    items={[
+      {
+        title: 'Graphic Design',
+        description: 'Corporate branding, logo design, vehicle branding, wall branding, outdoor signage, digital and print design.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Digital Printing',
+        description: 'Brochures, catalogues, annual reports, manuals, flyers, and business cards — full colour, premium finish.',
+        icon: 'tabler:printer',
+      },
+      {
+        title: 'Large Format',
+        description: 'Billboards, banners, 3D signage, exhibition stands, and metal fabrication for outdoor and event branding.',
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'Screen Printing',
+        description: 'T-shirts, caps, uniforms, and promotional merchandise — embroidery and screen print for any quantity.',
+        icon: 'tabler:shirt',
+      },
+      {
+        title: 'Vehicle Branding',
+        description: 'Full wraps, partial decals, and fleet branding. Your vehicles become mobile billboards.',
+        icon: 'tabler:truck',
+      },
+      {
+        title: 'Promotional Items',
+        description: 'Branded pens, mugs, umbrellas, notepads, and corporate gifts for events and campaigns.',
+        icon: 'tabler:gift',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-orange-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'Start Your Project', href: '/contact', icon: 'tabler:arrow-right' },
+    ]}
+  >
+    <Fragment slot="title">Let's make your brand visible.</Fragment>
+    <Fragment slot="subtitle">Get a quote for printing, signage, or full branding.</Fragment>
+  </CallToAction>
+</Layout>

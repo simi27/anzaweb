@@ -1,0 +1,62 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'ICT & Stationery — Tomarac Company Ltd',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Infrastructure Enablement"
+    title="Quality Supplies, Reliable Support"
+  />
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Hardware & Peripherals',
+        description:
+          'Laptops, desktops, servers, printers, and peripherals from leading brands. We supply quality so you can work, perform, produce, and deliver results.',
+      },
+      {
+        title: 'Networking & Security',
+        description:
+          'Networking equipment, security systems, CCTV, and access control for offices, schools, and institutions. End-to-end setup and support.',
+      },
+      {
+        title: 'Software Development',
+        description:
+          'Custom software solutions, web development, and system integration tailored to your business needs.',
+      },
+      {
+        title: 'Office & School Stationery',
+        description:
+          'Full range of office, school, and home stationery. Printing consumables, toner, paper products, and art supplies — always in stock.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'ICT and Office Supplies',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Everything Your Office Needs</h3>
+      From hardware to consumables — one source, one standard, one invoice.
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:arrow-right' },
+    ]}
+  >
+    <Fragment slot="title">Need supplies or IT equipment?</Fragment>
+    <Fragment slot="subtitle">Let us know what you need and we'll get back to you with pricing.</Fragment>
+  </CallToAction>
+</Layout>
