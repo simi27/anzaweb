@@ -1,0 +1,61 @@
+{
+  "brand": {
+    "name": "Tomarac Company Limited",
+    "tagline": "There's TOMARAC and There's 'Not Exactly'",
+    "subtagline": "From Concept to Creation",
+    "vertical": "Multi-sector Conglomerate",
+    "sectors": ["Mobility & Logistics", "Visual Communication", "ICT & Stationery", "Timber Works"],
+    "tone": "Confident, Direct, Professional",
+    "voice": "Active voice. Use the 'Not Exactly' dichotomy. Keywords: Trusted, Reliable, Secure, Partner, Quality, Precision, Under One Roof."
+  },
+  "colors": {
+    "primary": "#F58220",
+    "primary_rgb": "245 130 32",
+    "secondary": "#DC6400",
+    "secondary_rgb": "220 100 0",
+    "accent": "#263B8C",
+    "accent_rgb": "38 59 140",
+    "foundation": "#001C3E",
+    "foundation_rgb": "0 28 62",
+    "forest_green": "#006838",
+    "forest_green_rgb": "0 104 56",
+    "rich_black": "#000000"
+  },
+  "typography": {
+    "headings": {
+      "family": "Nexa Family",
+      "web_fallback": "Montserrat",
+      "styles": ["Regular", "Heavy Italic"]
+    },
+    "body": {
+      "family": "Lato Family",
+      "web_fallback": "Lato",
+      "styles": ["Regular", "Bold Italic"]
+    }
+  },
+  "trust_signals": {
+    "tin": "179-058-510",
+    "incorporation": "179-058-510 (24 Oct 2024)",
+    "licenses": [
+      "BL01396922025-2600002270 (Stationery)",
+      "BL01396922025-2600002560 (Printing)",
+      "BL01396922025-2600002606 (ICT)",
+      "BL01396922024-2500008844 (Car Hire)"
+    ],
+    "basata": "BST-9684-2025-1279",
+    "latra": "TR358119",
+    "bankers": ["CRDB Bank Tanzania", "ACB Bank"]
+  },
+  "contact": {
+    "address": "NHC-Urafiki flats, Ubungo, Morogoro Road, Dar es Salaam",
+    "email": "tomarac2024@gmail.com",
+    "phone": ["+255 713 636 928", "+255 759 014 444"],
+    "whatsapp": "+255 759 014 444"
+  },
+  "seo": {
+    "keywords": ["Car Rental Dar es Salaam", "Large Format Printing Tanzania", "Office Supplies Ubungo", "Timber Sawing Tanzania", "Corporate Branding Tanzania"],
+    "language": "en",
+    "country": "Tanzania"
+  },
+  "warning": "Source PDFs contain Spanish/Portuguese placeholders (TODO LO NECESARIO PARA DIRIGIR, ESCOLHO A MOVICEL). NEVER copy to live site. Use real portfolio images only."
+}

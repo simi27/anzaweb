@@ -104,3 +104,28 @@ After changes, always verify:
 1. `npm run build` succeeds
 2. `npm run check` passes (astro check + ESLint + Prettier)
 3. Visual check in browser: homepage, blog, dark mode, mobile menu
+
+---
+
+## ANZA Web Starter — Brand Configuration
+
+This repository is configured for the **ANZA Web Starter** workflow. The brand "source of truth" lives in `vision-config.json` at the project root.
+
+### To create a new theme variant:
+
+1. Read brand values from `vision-config.json`
+2. Edit:
+   - `src/config.yaml` — site name, metadata, SEO
+   - `src/components/CustomStyles.astro` — CSS variables (colors, fonts)
+   - `src/navigation.ts` — nav/footer structure
+   - `src/pages/index.astro` — homepage widget content
+3. Build with `npm run build`
+4. Commit to a new branch, push → Netlify branch deploy
+
+### Tomarac Theme A ("The Official")
+
+- **Branch:** `main`
+- **Colors:** Tomarac Orange #F58220 (primary), Deep Navy #001C3E (foundation)
+- **Fonts:** Montserrat (headings, Nexa alternative), Lato (body)
+- **Vibe:** Corporate, trust-focused, government-contractor ready
+
