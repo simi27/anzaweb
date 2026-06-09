@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Features from '~/components/widgets/Features.astro';
+import Brands from '~/components/widgets/Brands.astro';
 import Content from '~/components/widgets/Content.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Contact from '~/components/widgets/Contact.astro';
@@ -54,6 +55,21 @@ const metadata = {
       { title: 'Service Lines', amount: '6+' },
       { title: 'Expert Team', amount: '7' },
       { title: 'Languages', amount: 'EN & SW' },
+    ]}
+  />
+
+  <!-- Brands Widget — Trusted By -->
+
+  <Brands
+    title="Trusted By"
+    subtitle="Government, corporate, and institutional partners"
+    images={[
+      { src: '/assets/tomarac/comp1.png', alt: 'Tanzania Government' },
+      { src: '/assets/tomarac/comp2.png', alt: 'NEC Tanzania' },
+      { src: '/assets/tomarac/comp4.png', alt: 'Vodacom' },
+      { src: '/assets/tomarac/comp6.png', alt: 'TPDF' },
+      { src: '/assets/tomarac/comp13.png', alt: 'Barrick Gold' },
+      { src: '/assets/tomarac/comp3.png', alt: 'ACISP' },
     ]}
   />
 
