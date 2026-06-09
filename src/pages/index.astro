@@ -10,7 +10,7 @@ import Contact from '~/components/widgets/Contact.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Tomarac Company Limited — Multi-Sector Service Provider',
+  title: 'Tomarac Company Ltd — From Concept to Creation',
   ignoreTitleTemplate: true,
 };
 ---
@@ -22,28 +22,27 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get a Quote',
-        href: '/contact',
+        text: 'Explore Our Services',
+        href: '#services',
         icon: 'tabler:arrow-right',
       },
       {
-        text: 'Download Profile',
-        href: '/assets/tomaracprofile.pdf',
-        icon: 'tabler:download',
+        text: 'Start a Project',
+        href: '#contact',
+        icon: 'tabler:message',
       },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Tomarac Company Limited' }}
+    image={{ src: '/assets/logo_full.png', alt: 'Tomarac Company Limited' }}
   >
     <Fragment slot="title">
-      <span class="text-accent dark:text-white">From Concept</span>
-      <br class="block sm:hidden" />
-      <span class="hidden sm:inline"> </span>to Creation
+      From<br class="block sm:hidden" />
+      <span class="text-primary dark:text-white">Concept to Creation</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="font-semibold text-primary">There's TOMARAC and There's 'Not Exactly'.</span>
+      <span class="font-semibold">We think creative so you can communicate adequately.</span>
       <br />
-      Tanzania's trusted multi-sector partner — Mobility, Branding, ICT Supplies & Timber Works — all under one roof.
+      A multimedia house delivering branding, printing, ICT, and communications solutions across Tanzania.
     </Fragment>
   </Hero>
 
@@ -51,80 +50,46 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Established', amount: '2024' },
-      { title: 'Licenses', amount: '8+' },
-      { title: 'Bankers', amount: '2' },
-      { title: 'Sectors', amount: '4' },
+      { title: 'Founded', amount: '2024' },
+      { title: 'Service Lines', amount: '6+' },
+      { title: 'Expert Team', amount: '7' },
+      { title: 'Languages', amount: 'EN & SW' },
     ]}
   />
 
-  <!-- Features Widget — 4 Service Verticals -->
-
-  <Features
-    id="services"
-    tagline="What We Do"
-    title="Four Verticals, One Standard of Excellence"
-    subtitle="From moving your team to building your brand — Tomarac delivers across every touchpoint of your business."
-    items={[
-      {
-        title: 'Mobility & Logistics',
-        description:
-          'Fleet of Land Cruisers, Alphards, and buses for corporate, government, tourism, and event transport. Field-ready, secure, and punctual.',
-        icon: 'tabler:car',
-      },
-      {
-        title: 'Printing & Branding',
-        description:
-          'Full-service creative production: graphic design, large-format printing, 3D signage, vehicle branding, and promotional merchandise.',
-        icon: 'tabler:palette',
-      },
-      {
-        title: 'ICT & Stationery',
-        description:
-          'Hardware, software, networking, security systems, and office consumables. Quality supplies so you can work, perform, and deliver.',
-        icon: 'tabler:device-laptop',
-      },
-      {
-        title: 'Timber Works',
-        description:
-          'Sawing, splitting, and supply of wood products — sawdust, woodchips, strips, and more for industrial and commercial use.',
-        icon: 'tabler:tree',
-      },
-    ]}
-  />
-
-  <!-- Content Widget — The Code of Battle -->
+  <!-- About / Code of Battle -->
 
   <Content
     isReversed
-    tagline="Our Ethos"
-    title="The Tomarac Code of Battle"
+    tagline="Who We Are"
+    title="Your Partner in Visual Communications"
     items={[
       {
-        title: 'Implementation',
+        title: 'A Multimedia House',
         description:
-          'We ensure every client can implement their brand and operations consistently — no gaps between vision and reality.',
+          'Tomarac is the media house lineup of communications services that provides for a diverse palette of sectors using the strength of written, visual and print content to relay messages, interpret ideas for everyday solutions, and connect consumers with the world around them.',
       },
       {
-        title: 'Partnership',
+        title: 'Experience That Delivers',
         description:
-          'We build long-term, solution-oriented relationships that scale regionally and internationally.',
+          'Formed out of years of experience in multimedia and communication, our services respond directly to everyday communication challenges. We deliver in both English and Swahili, ensuring our clients effectively connect with audiences across the country.',
       },
       {
-        title: 'Value',
+        title: 'Founded in 2024',
         description:
-          'Group procurement and technical expertise that add tangible value to every engagement.',
-      },
-      {
-        title: 'Self-Reflection',
-        description:
-          '"Self Critical... there is always a better way." Continuous improvement drives everything we do.',
+          'Seven highly experienced individuals came together to supply promotion items, computers, stationery, ICT equipment, car hire, printing & advertising services, and timber works.',
       },
     ]}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Built on Values</h3>
-      Integrity, continuity, safety, and convenience — the foundation of every client relationship.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Code of Battle</h3>
+      <ol class="list-decimal list-inside space-y-2 text-gray-600 dark:text-gray-300">
+        <li>Ensure clients can successfully implement their brand consistently</li>
+        <li>Build long-term branding and solution-oriented relationships</li>
+        <li>Deliver technical solutions and add value to brand management</li>
+        <li>Answer the call of pan-African and continental networks</li>
+        <li>Self-critical — there is always a better way</li>
+      </ol>
     </Fragment>
 
     <Fragment slot="bg">
@@ -132,81 +97,98 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget — Under One Roof -->
+  <!-- Services Section -->
 
-  <Content
-    isAfterContent
-    tagline="The Ecosystem"
-    title="Your Campaign Support Partner"
+  <Features
+    id="services"
+    tagline="Our Expertise"
+    title="Comprehensive Media & Communications Services"
+    subtitle="From creative design to ICT infrastructure, we deliver end-to-end solutions that bring your vision to life."
+    columns={3}
     items={[
       {
-        title: 'Logistics + Visibility',
+        title: 'Graphic Design & Branding',
         description:
-          'Need a vehicle for your public awareness campaign? Don\'t forget the branding. We deliver both.',
+          'Corporate branding, vehicle branding, wall branding, outdoor signage, digital and print design. Logo & Identity, Vehicle & Wall Branding, Billboards & Signage.',
+        icon: 'tabler:palette',
       },
       {
-        title: 'Supplies + Execution',
+        title: 'Printing Services',
         description:
-          'From ICT hardware to promotional merchandise — one vendor, one invoice, zero hassle.',
+          'Digital printing, screen printing, large format, metal fabrication, and exhibition materials. Brochures & Catalogues, Annual Reports & Manuals, Promotional Materials.',
+        icon: 'tabler:printer',
       },
       {
-        title: 'Government Ready',
+        title: 'ICT Equipment',
         description:
-          'Fully licensed (TIN, BRELA, BASATA, LATRA) and compliant for governmental and institutional contracts.',
+          'Computers, peripherals, networking, servers, software development, and security systems. Hardware & Peripherals, Networking & Security, Software Development.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Stationery Supplies',
+        description:
+          'Office, school and home stationery, printing consumables, art supplies, and general supplies. Office & School Supplies, Printing Consumables, Art & Craft Supplies.',
+        icon: 'tabler:backpack',
+      },
+      {
+        title: 'Car Rental',
+        description:
+          'Tours, safari, vacation, business travel, and community service transportation. Safe, reliable vehicles for corporate, government, and leisure clients.',
+        icon: 'tabler:car',
+      },
+      {
+        title: 'Timber Works',
+        description:
+          'Sawing, wood splitting, woodchips, and various wood product manufacturing. Quality timber processing for industrial and commercial use.',
+        icon: 'tabler:tree',
       },
     ]}
-  >
-    <Fragment slot="content">The "Under One Roof" advantage — fewer vendors, better coordination, stronger results.</Fragment>
+  />
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget — How It Works -->
+  <!-- Our Process -->
 
   <Steps
-    title="From First Call to Project Completion"
+    tagline="Our Process"
+    title="How We Bring Ideas to Life"
+    subtitle="From the first brainstorm to the final creation, we follow a proven creative process."
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Consult</span>',
-        description:
-          'Tell us your needs. Whether it\'s a fleet for a government tour, branded uniforms, or office setup — we listen first.',
-        icon: 'tabler:message',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Concept</span>',
-        description:
-          'We develop a tailored solution with clear timelines, pricing, and deliverables.',
+        title: '<span class="font-medium">Brainstorm</span>',
+        description: 'Understanding your vision and goals. We listen, ask questions, and dig deep to understand what you need.',
         icon: 'tabler:bulb',
       },
       {
-        title: 'Step 3: <span class="font-medium">Execute</span>',
-        description:
-          'Our team mobilizes — vehicles arrive, prints roll, supplies are delivered. On time, every time.',
-        icon: 'tabler:rocket',
+        title: '<span class="font-medium">Concept</span>',
+        description: 'Developing creative direction. Mood boards, sketches, and design concepts that capture your brand essence.',
+        icon: 'tabler:brush',
       },
       {
-        title: 'Delivered!',
+        title: '<span class="font-medium">Sketches</span>',
+        description: 'Refining the design approach. Iterative feedback and polish until every detail is right.',
+        icon: 'tabler:pencil',
+      },
+      {
+        title: '<span class="font-medium">Creation</span>',
+        description: 'Delivering the final product. On time, on brief, on budget — from concept to creation.',
         icon: 'tabler:check',
       },
     ]}
   />
 
-  <!-- Contact Widget -->
+  <!-- Contact Section -->
 
   <Contact
-    title="Let's Talk"
-    subtitle="Whether you need a single vehicle, a full branding campaign, or ongoing supply — reach out."
+    title="Let's Create Something Extraordinary Together"
+    subtitle="Ready to start your next project? Reach out to our team. We'll work with you to understand your needs and deliver communications that make an impact."
     tagline="Get in Touch"
     inputs={[
-      { type: 'text', name: 'name', placeholder: 'Your Name', autocomplete: 'name', label: 'Name' },
+      { type: 'text', name: 'name', placeholder: 'Your Full Name', autocomplete: 'name', label: 'Full Name' },
       { type: 'email', name: 'email', placeholder: 'Your Email', autocomplete: 'email', label: 'Email' },
-      { type: 'text', name: 'phone', placeholder: 'Your Phone', autocomplete: 'tel', label: 'Phone' },
+      { type: 'text', name: 'service', placeholder: 'Service Needed (e.g., Graphic Design, Car Rental)', label: 'Service Needed' },
     ]}
     textarea={{ name: 'message', placeholder: 'Tell us about your project...', label: 'Message' }}
     button="Send Message"
-    description="Or reach us directly: tomarac2024@gmail.com / +255 713 636 928"
+    description="tomarac2024@gmail.com | +255 713 636 928 | Or download our company profile below."
   />
 
   <!-- CallToAction Widget -->
@@ -222,12 +204,11 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      Why risk <span class="text-primary">"Not Exactly"</span> when you can have Tomarac?
+      There's <span class="text-primary">Tomarac</span> and There's "Not Exactly"
     </Fragment>
 
     <Fragment slot="subtitle">
-      Trusted by clients across Tanzania for reliable service, premium quality, and end-to-end support.
-      <br class="hidden md:inline" />Let's build something together.
+      Trusted for reliable, creative, and professional communications services across Tanzania.
     </Fragment>
   </CallToAction>
 </Layout>
