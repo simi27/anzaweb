@@ -129,3 +129,11 @@ This repository is configured for the **ANZA Web Starter** workflow. The brand "
 - **Fonts:** Montserrat (headings, Nexa alternative), Lato (body)
 - **Vibe:** Corporate, trust-focused, government-contractor ready
 
+### Tomarac Theme B ("The Creative")
+
+- **Branch:** `tomarac-creative`
+- **Same colors** as Theme A, but applied differently:
+- **Vibe:** Light, vibrant, portfolio-forward, agency/showcase feel
+- **Extra widgets:** Brands (trust logos), Features2 (creative portfolio grid), Testimonials
+- **Process focus:** "Listen → Create → Produce → Deliver" narrative
+
