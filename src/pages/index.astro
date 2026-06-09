@@ -2,293 +2,213 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Brands from '~/components/widgets/Brands.astro';
+import Stats from '~/components/widgets/Stats.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
 import Contact from '~/components/widgets/Contact.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Stats from '~/components/widgets/Stats.astro';
 
 const metadata = {
-  title: 'Tomarac — From Concept to Creation',
+  title: 'Tomarac Company Ltd — From Concept to Creation',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget — Bold, vibrant ------------------ -->
+  <!-- Hero Widget ******************* -->
 
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Explore Our Work',
-        href: '/services/printing-branding',
-        icon: 'tabler:eye',
+        text: 'Explore Our Services',
+        href: '#services',
+        icon: 'tabler:arrow-right',
       },
       {
         text: 'Start a Project',
-        href: '/contact',
-        icon: 'tabler:arrow-right',
+        href: '#contact',
+        icon: 'tabler:message',
       },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Tomarac Creative' }}
+    image={{ src: '/assets/logo_full.png', alt: 'Tomarac Company Limited' }}
   >
     <Fragment slot="title">
-      We Take You From
-      <br />
-      <span class="text-primary">Concept to Creation</span>
+      From<br class="block sm:hidden" />
+      <span class="text-primary dark:text-white">Concept to Creation</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      A multi-disciplinary team of creators, makers, and problem-solvers. 
-      <span class="font-semibold">There's TOMARAC and There's 'Not Exactly'.</span>
+      <span class="font-semibold">We think creative so you can communicate adequately.</span>
+      <br />
+      A multimedia house delivering branding, printing, ICT, and communications solutions across Tanzania.
     </Fragment>
   </Hero>
 
-  <!-- Brands Widget — Trust logos placeholder ------- -->
-
-  <Brands
-    title="Trusted by organisations across Tanzania"
-    subtitle="Government | Corporate | NGOs | Tourism | Institutions"
-    icons={[
-      'tabler:building',
-      'tabler:building-community',
-      'tabler:heart-handshake',
-      'tabler:backpack',
-      'tabler:school',
-    ]}
-  />
-
-  <!-- Stats Widget ------- -->
+  <!-- Stats Widget — Trust Signals -->
 
   <Stats
     stats={[
-      { title: 'Services', amount: '4' },
-      { title: 'Licenses', amount: '8+' },
-      { title: 'Est.', amount: '2024' },
-      { title: 'Locations', amount: 'Dar es Salaam' },
+      { title: 'Founded', amount: '2024' },
+      { title: 'Service Lines', amount: '6+' },
+      { title: 'Expert Team', amount: '7' },
+      { title: 'Languages', amount: 'EN & SW' },
     ]}
   />
 
-  <!-- Features Widget — Service Verticals ------------ -->
+  <!-- About / Code of Battle -->
+
+  <Content
+    isReversed
+    tagline="Who We Are"
+    title="Your Partner in Visual Communications"
+    items={[
+      {
+        title: 'A Multimedia House',
+        description:
+          'Tomarac is the media house lineup of communications services that provides for a diverse palette of sectors using the strength of written, visual and print content to relay messages, interpret ideas for everyday solutions, and connect consumers with the world around them.',
+      },
+      {
+        title: 'Experience That Delivers',
+        description:
+          'Formed out of years of experience in multimedia and communication, our services respond directly to everyday communication challenges. We deliver in both English and Swahili, ensuring our clients effectively connect with audiences across the country.',
+      },
+      {
+        title: 'Founded in 2024',
+        description:
+          'Seven highly experienced individuals came together to supply promotion items, computers, stationery, ICT equipment, car hire, printing & advertising services, and timber works.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Code of Battle</h3>
+      <ol class="list-decimal list-inside space-y-2 text-gray-600 dark:text-gray-300">
+        <li>Ensure clients can successfully implement their brand consistently</li>
+        <li>Build long-term branding and solution-oriented relationships</li>
+        <li>Deliver technical solutions and add value to brand management</li>
+        <li>Answer the call of pan-African and continental networks</li>
+        <li>Self-critical — there is always a better way</li>
+      </ol>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-orange-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Services Section -->
 
   <Features
     id="services"
-    tagline="What We Deliver"
-    title="Creative. Logistics. Supplies. Timber."
-    subtitle="Four capabilities that come together to bring your vision to life."
+    tagline="Our Expertise"
+    title="Comprehensive Media & Communications Services"
+    subtitle="From creative design to ICT infrastructure, we deliver end-to-end solutions that bring your vision to life."
+    columns={3}
     items={[
       {
-        title: 'Mobile & Logistics',
+        title: 'Graphic Design & Branding',
         description:
-          'Fleet-ready for government campaigns, executive transfers, tourism safaris, and event shuttles. Land Cruisers, Alphards, and buses — safe, reliable, on time.',
-        icon: 'tabler:car',
-      },
-      {
-        title: 'Print & Branding',
-        description:
-          'Full creative production: graphic design, billboards, 3D signage, vehicle wraps, branded merchandise. From sketch to install — we make your brand visible.',
+          'Corporate branding, vehicle branding, wall branding, outdoor signage, digital and print design. Logo & Identity, Vehicle & Wall Branding, Billboards & Signage.',
         icon: 'tabler:palette',
       },
       {
-        title: 'ICT & Office Supplies',
+        title: 'Printing Services',
         description:
-          'Hardware, software, networking, security, and stationery. One source for everything your office needs to operate at full capacity.',
+          'Digital printing, screen printing, large format, metal fabrication, and exhibition materials. Brochures & Catalogues, Annual Reports & Manuals, Promotional Materials.',
+        icon: 'tabler:printer',
+      },
+      {
+        title: 'ICT Equipment',
+        description:
+          'Computers, peripherals, networking, servers, software development, and security systems. Hardware & Peripherals, Networking & Security, Software Development.',
         icon: 'tabler:device-laptop',
       },
       {
-        title: 'Timber & Wood Products',
+        title: 'Stationery Supplies',
         description:
-          'Industrial sawing, splitting, and supply of wood products — sawdust, woodchips, strips. Quality raw materials for construction and manufacturing.',
+          'Office, school and home stationery, printing consumables, art supplies, and general supplies. Office & School Supplies, Printing Consumables, Art & Craft Supplies.',
+        icon: 'tabler:backpack',
+      },
+      {
+        title: 'Car Rental',
+        description:
+          'Tours, safari, vacation, business travel, and community service transportation. Safe, reliable vehicles for corporate, government, and leisure clients.',
+        icon: 'tabler:car',
+      },
+      {
+        title: 'Timber Works',
+        description:
+          'Sawing, wood splitting, woodchips, and various wood product manufacturing. Quality timber processing for industrial and commercial use.',
         icon: 'tabler:tree',
       },
     ]}
   />
 
-  <!-- Features2 Widget — Creative showcase ---------- -->
-
-  <Features2
-    tagline="The Creative Side"
-    title="Your Brand, Our Canvas"
-    subtitle="We think creative so you can communicate adequately. From concept sketches to final install — here's what we do best."
-    items={[
-      {
-        title: 'Graphic Design',
-        description: 'Corporate profiles, mood boards, brand identities. We turn ideas into visuals.',
-        icon: 'tabler:brush',
-      },
-      {
-        title: 'Large Format Printing',
-        description: 'Billboards, banners, 3D signage, floor graphics. Make an impact at any scale.',
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'Vehicle Branding',
-        description: 'Full wraps and partial decals. Your fleet becomes a mobile billboard.',
-        icon: 'tabler:truck',
-      },
-      {
-        title: 'Promo Merchandise',
-        description: 'T-shirts, caps, mugs, umbrellas, pens — branded and delivered.',
-        icon: 'tabler:gift',
-      },
-      {
-        title: 'Event Branding',
-        description: 'Gazebos, backdrops, banners, and stage branding for conferences and campaigns.',
-        icon: 'tabler:calendar-event',
-      },
-      {
-        title: 'Metal Fabrication',
-        description: 'Custom metal signs, stands, and structural branding elements.',
-        icon: 'tabler:tools',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-orange-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- Content Widget — Code of Battle ---------------- -->
-
-  <Content
-    isReversed
-    tagline="How We Work"
-    title="The Tomarac Code of Battle"
-    items={[
-      {
-        title: 'Implementation',
-        description:
-          'We ensure every client can implement their brand consistently — no gap between vision and reality.',
-      },
-      {
-        title: 'Partnership',
-        description:
-          'Long-term, solution-oriented relationships that scale. We grow with you.',
-      },
-      {
-        title: 'Value',
-        description:
-          'Group procurement and technical expertise that adds tangible value to every project.',
-      },
-      {
-        title: 'Reflection',
-        description:
-          '"Self Critical... there is always a better way." Continuous improvement drives everything we do.',
-      },
-    ]}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Built on Values</h3>
-      Integrity, creativity, and precision — delivered in English & Swahili.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget — Process ------------------------ -->
+  <!-- Our Process -->
 
   <Steps
+    tagline="Our Process"
     title="How We Bring Ideas to Life"
+    subtitle="From the first brainstorm to the final creation, we follow a proven creative process."
     items={[
       {
-        title: '<span class="font-medium">Listen</span>',
-        description:
-          'Every project starts with a conversation. We learn your needs, your audience, your goals.',
-        icon: 'tabler:message',
-      },
-      {
-        title: '<span class="font-medium">Create</span>',
-        description:
-          'Our team develops concepts, sketches, mood boards, and prototypes. You see the vision before we build.',
+        title: '<span class="font-medium">Brainstorm</span>',
+        description: 'Understanding your vision and goals. We listen, ask questions, and dig deep to understand what you need.',
         icon: 'tabler:bulb',
       },
       {
-        title: '<span class="font-medium">Produce</span>',
-        description:
-          'We mobilise — print, fabricate, source, and coordinate. Quality checks at every stage.',
-        icon: 'tabler:rocket',
+        title: '<span class="font-medium">Concept</span>',
+        description: 'Developing creative direction. Mood boards, sketches, and design concepts that capture your brand essence.',
+        icon: 'tabler:brush',
       },
       {
-        title: '<span class="font-medium">Deliver</span>',
-        description: 'On time, on brief, on budget. Your project, complete.',
+        title: '<span class="font-medium">Sketches</span>',
+        description: 'Refining the design approach. Iterative feedback and polish until every detail is right.',
+        icon: 'tabler:pencil',
+      },
+      {
+        title: '<span class="font-medium">Creation</span>',
+        description: 'Delivering the final product. On time, on brief, on budget — from concept to creation.',
         icon: 'tabler:check',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Creative process',
-    }}
   />
 
-  <!-- Testimonials Widget ---------------------------- -->
-
-  <Testimonials
-    tagline="Trusted Partners"
-    title="What Our Clients Say"
-    testimonials={[
-      {
-        title: 'Government Agency',
-        testimonial:
-          'Reliable partner for our public awareness campaign. Vehicles on time, branding delivered ahead of schedule.',
-        name: '— Project Coordinator',
-      },
-      {
-        title: 'Corporate Client',
-        testimonial:
-          'From vehicle branding to office supplies — one vendor, one standard. Exactly what we needed.',
-        name: '— Procurement Manager',
-      },
-      {
-        title: 'Event Organiser',
-        testimonial:
-          'They handled our entire event branding. Gazebos, banners, T-shirts, stage setup. Flawless execution.',
-        name: '— Event Director',
-      },
-    ]}
-  />
-
-  <!-- Contact Widget -------------------------------- -->
+  <!-- Contact Section -->
 
   <Contact
-    title="Start Your Project"
-    subtitle="Tell us what you need. We'll take it from concept to creation."
+    title="Let's Create Something Extraordinary Together"
+    subtitle="Ready to start your next project? Reach out to our team. We'll work with you to understand your needs and deliver communications that make an impact."
     tagline="Get in Touch"
     inputs={[
-      { type: 'text', name: 'name', placeholder: 'Your Name', autocomplete: 'name', label: 'Name' },
+      { type: 'text', name: 'name', placeholder: 'Your Full Name', autocomplete: 'name', label: 'Full Name' },
       { type: 'email', name: 'email', placeholder: 'Your Email', autocomplete: 'email', label: 'Email' },
-      { type: 'tel', name: 'phone', placeholder: 'Your Phone', autocomplete: 'tel', label: 'Phone' },
-      { type: 'text', name: 'service', placeholder: 'Which service? (e.g., Branding, Rental)', label: 'Service' },
+      { type: 'text', name: 'service', placeholder: 'Service Needed (e.g., Graphic Design, Car Rental)', label: 'Service Needed' },
     ]}
-    textarea={{ name: 'message', placeholder: 'Tell us about your project...', label: 'Project Details' }}
-    button="Send Enquiry"
-    description="Or call us: +255 713 636 928 / Email: tomarac2024@gmail.com"
+    textarea={{ name: 'message', placeholder: 'Tell us about your project...', label: 'Message' }}
+    button="Send Message"
+    description="tomarac2024@gmail.com | +255 713 636 928 | Or download our company profile below."
   />
 
-  <!-- CallToAction ----------------------------------- -->
+  <!-- CallToAction Widget -->
 
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Get Your Free Consultation',
-        href: '/contact',
-        icon: 'tabler:message',
+        text: 'Download Company Profile',
+        href: '/assets/tomaracprofile.pdf',
+        icon: 'tabler:download',
       },
     ]}
   >
     <Fragment slot="title">
-      Why choose <span class="text-primary">"Not Exactly"</span> when you can have Tomarac?
+      There's <span class="text-primary">Tomarac</span> and There's "Not Exactly"
     </Fragment>
 
     <Fragment slot="subtitle">
-      Let's create something memorable together.
+      Trusted for reliable, creative, and professional communications services across Tanzania.
     </Fragment>
   </CallToAction>
 </Layout>
